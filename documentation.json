@@ -536,7 +536,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  play: async ({canvasElement}) => {\r\n    const canvas = within(canvasElement);\r\n    const ele = canvas.getByLabelText(\"test\");\r\n    await userEvent.click(ele);\r\n  }\r\n}"
+                "defaultValue": "{\r\n  parameters: {\r\n    docs: {\r\n      story: { inline: true }, // render the story in an iframe\r\n      canvas: { sourceState: 'shown' }, // start with the source open\r\n      source: { type: 'code' },\r\n    }\r\n  },\r\n  play: async ({canvasElement}) => {\r\n    const canvas = within(canvasElement);\r\n    const ele = canvas.getByLabelText(\"test\");\r\n    await userEvent.click(ele);\r\n  }\r\n}"
             }
         ],
         "functions": [],
@@ -705,7 +705,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  play: async ({canvasElement}) => {\r\n    const canvas = within(canvasElement);\r\n    const ele = canvas.getByLabelText(\"test\");\r\n    await userEvent.click(ele);\r\n  }\r\n}"
+                    "defaultValue": "{\r\n  parameters: {\r\n    docs: {\r\n      story: { inline: true }, // render the story in an iframe\r\n      canvas: { sourceState: 'shown' }, // start with the source open\r\n      source: { type: 'code' },\r\n    }\r\n  },\r\n  play: async ({canvasElement}) => {\r\n    const canvas = within(canvasElement);\r\n    const ele = canvas.getByLabelText(\"test\");\r\n    await userEvent.click(ele);\r\n  }\r\n}"
                 }
             ],
             ".storybook/preview.ts": [

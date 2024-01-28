@@ -15,6 +15,13 @@ export default meta;
 type Story = StoryObj<AppComponent>;
 
 export const ToggleOn: Story = {
+  parameters: {
+    docs: {
+      story: { inline: true }, // render the story in an iframe
+      canvas: { sourceState: 'shown' }, // start with the source open
+      source: { type: 'code' },
+    }
+  },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
     const ele = canvas.getByLabelText("test");
